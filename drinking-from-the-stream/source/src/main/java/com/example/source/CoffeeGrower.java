@@ -17,6 +17,6 @@ class CoffeeGrower {
     @Scheduled(fixedRate = 1000)
     @Bean
     Supplier<WholesaleCoffee> sendCoffee() {
-        return () -> generator.generate();
+        return generator::generate;
     }
 }
